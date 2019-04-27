@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      pre{
+        font-size: 16px;
+        padding: 5px;
+      }
+      .cmd{
+        background:#404040;
+        color:white;
+      }
+      .code{
+        background: #2c1d0e;
+        color: white;
+      }
+      </style>
+    <title>CoffeeScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="text-align:center;">
+
+        <h1 class="display-3">CoffeeScript</h1>
+        <p class="lead">By Team dah_thats_hot (Robin Han and Ray Onishi)</p>
+
+      </div>
+    </div>
+    <div class="container-fluid" style="text-align:center">
+      <div class="jumbotron jumbotron-fluid" style="width:95%;display:inline-block;text-align:left;padding:1%">
+
+        <h1 class="display-4">Overview</h1>
+        <p class="lead">CoffeeScript on left, compiled JavaScript on right</p>
+
+        <hr>
+        <p class="lead"><strong>What is it?</strong></p>
+        <ul>
+          <li>CoffeeScript is a language that compiles into JavaScript.</li>
+          <li>Inspired by Ruby and Python</li>
+          <li>Made as an effort to enhance JavaScript's brevity and readability.</li>
+          <li>The golden rule of coffeescript: <b>“IT’S JUST JAVASCRIPT”</b>.</li>
+        </ul>
+        <p class="lead"><strong>History</strong></p>
+        <ul>
+          <li>CoffeeScript is developed by Jeremy Ashkenas. It was first committed in Git On December 13, 2009.</li>
+          <li>Originally the compiler of the CoffeeScript was written in Ruby language.</li>
+          <li>In March 2010, the CoffeeScript compiler was replaced; this time instead of Ruby, they used CoffeeScript itself.</li>
+          <li>Also in 2010, CoffeeScript 1.0 was released and it was one of the most wanted projects of the Git hub.</li>
+        </ul>
+        <p class="lead"><strong>What are the advantages?</strong></p>
+        <ul>
+          <li><b>Easily understandable</b> − CoffeeScript syntax is simple compared to JavaScript. Codes are more clean, clear, and easily understandable.</li>
+          <li><b>Less Code, More Functionality</b> − For a huge code in JavaScript, we need comparatively less number of lines of CoffeeScript. </li>
+          <li><b>Class-based Inheritance</b> - JavaScript does not have classes. CoffeeScript allows for the creation of classes and inheritance. In addition to this, it also provides instance and static properties.</li>
+          <li><b>Avoids problematic symbols</b>  − There is no need to use semicolons and parentheses in CoffeeScript. Instead of curly braces, we can use white spaces to differentiate the block codes like functions, loops, etc.</li>
+          <li><b>Extensive library support</b> − In CoffeeScript, we can use the libraries of JavaScript and vice versa. Therefore, we have access to a rich set of libraries while working with CoffeeScript.</li>
+        </ul>
+        <p class="lead"><strong>What are the disadvantages?</strong></p>
+        <ul>
+            <li><b>Debugging is pain</b> − There isn't yet any way to match compiled JS lines to the original CoffeeScript (though the Firefox folks have promised that this is coming).</li>
+            <li><b>It's not as well-known</b> CoffeeScript has become popular in a short amount of time, but it's unlikely that it'll have as vast as a community as JavaScript.</li>
+        </ul>
+        <hr>
+        <p class="lead"><strong>Getting started</strong></p>
+        <h5><small>To globally install CoffeeScript, you can use npm (node package manager)</small></h5>
+        <pre class="cmd" style="padding:0">
+          <code>
+
+  npm install --global coffeescript
+          </code>
+        </pre>
+        <h5><small>To locally install CoffeeScript in a project, you can use npm again</small></h5>
+        <pre class="cmd" style="padding:0">
+          <code>
+
+  npm install --save-dev coffeescript
+          </code>
+        </pre>
+        <h5><small>To watch for changes in the .coffee file and recompile into js whenever a change occurs,</small></h5>
+        <pre class="cmd" style="padding:0">
+          <code>
+
+  coffee -watch --compile test.coffee
+          </code>
+        </pre>
+        <h5><small>To get the output from running the compiled JS,</small></h5>
+        <pre class="cmd" style="padding:0">
+          <code>
+
+  coffee test.coffee
+          </code>
+        </pre>
+        <h5><small>You can see <a href="https://coffeescript.org/#usage">here</a> for more details on usage of CoffeeScript in the command line.</small></h5>
+        <hr>
+        <p class="lead"><strong>Declaring variables</strong></p>
+        <p>
+          Declaring variables are less tedious in CoffeeScript. In JavaScript, you have to initialize variables similar to that in Java. In CoffeeScript, however, you can directly give a variable and value.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  physics_c_grade = 72
+  that_smells = "like a qaf post"
+
+  # You can also do
+  physics_c_grade = 72; that_smells = "like a qaf post"
+
+  console.log physics_c_grade
+  console.log that_smells
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  var physics_c_grade, that_smells;
+  physics_c_grade = 72;
+
+  that_smells = "like a qaf post";
+
+  // You can also do
+  physics_c_grade = 72;
+
+  that_smells = "like a qaf post";
+
+  console.log(physics_c_grade);
+
+  console.log(that_smells);
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  72
+  like a qaf post
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+
+        <p class="lead"><strong>Functions</strong></p>
+        <p>
+          Functions in CoffeeScript are also simplified. There are no curly braces, parenthesis, or semicolons necessary. Instead, the code is indented with spaces.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  escalator_works = () ->
+    false
+  console.log escalator_works();
+
+
+  is_it_hot = (num) ->
+    if num > 0
+      "thats hot"
+    else
+      "its rewind time"
+
+  console.log is_it_hot(-1);
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  var escalator_works, is_it_hot;
+
+  escalator_works = function() {
+    return false;
+  };
+
+  console.log(escalator_works());
+
+  is_it_hot = function(num) {
+    if (num > 0) {
+      return "thats hot";
+    } else {
+      return "its rewind time";
+    }
+  };
+
+  console.log(is_it_hot(-1));
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  false
+  its rewind time
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr>
+
+        <p class="lead"><strong>Arrays</strong></p>
+        <p>
+          Accessing arrays and making subarrays can be done with brackets instead of calling a separate function. This can be seen below.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  physics_test_grades = [97,88,75,49,34,22,1]
+
+  # inclusive range
+  console.log physics_test_grades[0..2]
+
+  # exclusive range
+  console.log physics_test_grades[0...2]
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  var physics_test_grades;
+
+  physics_test_grades = [97, 88, 75, 49, 34, 22, 1];
+
+  // inclusive range
+  console.log(physics_test_grades.slice(0, 3));
+
+  // exclusive range
+  console.log(physics_test_grades.slice(0, 2));
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  [ 97, 88, 75 ]
+  [ 97, 88 ]
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <hr>
+
+        <p class="lead"><strong>Declaring Objects</strong></p>
+        <p>
+          Declaring objects in CoffeeScript is similar to declaring objects in JavaScript. Similar to functions, the code is dependent on spacing instead of braces and semicolons.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  sing_shows =
+    sophfrosh:
+      theme: "espionage"
+      score:
+        pre_deduction: 918
+        post_deduction: 893
+      top_crew: "band"
+      summary: "what even happened here. band was good tho"
+    juniors:
+      theme: "mafia"
+      score:
+        pre_deduction: 1003
+        post_deduction: 985
+      top_crew: "step"
+      summary: "that's how mafia works"
+    seniors:
+      theme: "renaissance"
+      score:
+        pre_deduction: 1134
+        post_deduction: 1112
+      top_crew: "swing && step"
+      summary: "objectively amazing sing"
+
+  console.log sing_shows
+
+
+
+
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  var sing_shows;
+
+  sing_shows = {
+    sophfrosh: {
+      theme: "espionage",
+      score: {
+        pre_deduction: 918,
+        post_deduction: 893
+      },
+      top_crew: "band",
+      summary: "what even happened here. band was good tho"
+    },
+    juniors: {
+      theme: "mafia",
+      score: {
+        pre_deduction: 1003,
+        post_deduction: 985
+      },
+      top_crew: "step",
+      summary: "that's how mafia works"
+    },
+    seniors: {
+      theme: "renaissance",
+      score: {
+        pre_deduction: 1134,
+        post_deduction: 1112
+      },
+      top_crew: "swing && step",
+      summary: "objectively amazing sing"
+    }
+  };
+
+  console.log(sing_shows);
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  { sophfrosh:
+     { theme: 'espionage',
+       score: { pre_deduction: 918, post_deduction: 893 },
+       top_crew: 'band',
+       summary: 'what even happened here. band was good tho' },
+    juniors:
+     { theme: 'mafia',
+       score: { pre_deduction: 1003, post_deduction: 985 },
+       top_crew: 'step',
+       summary: 'that\'s how mafia works' },
+    seniors:
+     { theme: 'renaissance',
+       score: { pre_deduction: 1134, post_deduction: 1112 },
+       top_crew: 'swing && step',
+       summary: 'objectively amazing sing' } }
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr>
+
+        <p class="lead"><strong>Accessing Objects (using the Object sing_shows from previous section)</strong></p>
+        <p>
+          Accessing objects in CoffeeScript and in Javascript are the same.
+        </p>
+        <div class="row" >
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  console.log sing_shows['sophfrosh']['score']['pre_deduction']
+
+  #Using comprehension
+  kowalski_analysis = (thing) ->
+    for year, info of sing_shows
+      "#{year} had a " + thing + " of #{info[thing]}"
+
+  console.log kowalski_analysis("top_crew")
+
+
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  console.log(sing_shows['sophfrosh']['score']['pre_deduction']);
+
+  //Using comprehension
+  kowalski_analysis = function(thing) {
+    var info, results, year;
+    results = [];
+    for (year in sing_shows) {
+      info = sing_shows[year];
+      results.push(`${year} had a ` + thing + ` of ${info[thing]}`);
+    }
+    return results;
+  };
+
+  console.log(kowalski_analysis("top_crew"));
+
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  918
+  [ 'sophfrosh had a top_crew of band',
+    'juniors had a top_crew of step',
+    'seniors had a top_crew of swing && step' ]
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr>
+
+        <p class="lead"><strong>Operators</strong></p>
+        <p>
+          One of the main advantages of CoffeeScript is that it has many operators that is already familiar to us because they are just English words! Words like “isnt” is the equivalent to “!==“ in JavaScript. This makes coding multiple logic operators easier for the coder and reader.
+        </p>
+        <div class="row" >
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  elon_spending = (mood,money) ->
+    if mood isnt "bad" or money is "a lot"
+      "he's gonna send a car to space because why not"
+
+  console.log elon_spending("good","who knows")
+
+
+  find_team_name = (name) ->
+    generic_team_names = ["dah_thats_hot","humongous_chungus","moo-alpha-beta"]
+    i = Math.floor(Math.random() * (2))
+    unless name is "original and funny"
+      generic_team_names[i]
+    else
+      name
+
+  console.log find_team_name("idk")
+  console.log find_team_name("original and funny")
+
+
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  var elon_spending, find_team_name;
+
+  elon_spending = function(mood, money) {
+    if (mood !== "bad" || money === "a lot") {
+      return "he's gonna send a car to space because why not";
+    }
+  };
+
+  console.log(elon_spending("good", "who knows"));
+
+  find_team_name = function(name) {
+    var generic_team_names, i;
+    generic_team_names = ["dah_thats_hot", "humongous_chungus", "moo-alpha-beta"];
+    i = Math.floor(Math.random() * 2);
+    if (name !== "original and funny") {
+      return generic_team_names[i];
+    } else {
+      return name;
+    }
+  };
+
+  console.log(find_team_name("idk"));
+
+  console.log(find_team_name("original and funny"));
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  he's gonna send a car to space because why not
+  humongous_chungus
+  original and funny
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr>
+
+        <p class="lead"><strong>Loops</strong></p>
+        <p>
+          Looping is made easier in CoffeeScript. Although looping is still used in the same way, the code in CoffeeScript is much more clean and concise compared to the same code in JavaScript.
+        </p>
+        <div class="row" >
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  # While Loop
+  console.log "Starting While Loop"
+  count = 0
+  while count < 10
+     console.log "Current Count : " + count
+     count++;
+
+  # For Loop
+  for worst_sing_group,grade in ['SophFrosh', 'Junior']
+     console.log "hey hey! ho ho! "+ worst_sing_group + " SING just lost the show."
+
+  #Another For Loop
+  values = (num for num in [1..10] by 2)
+  console.log values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6">
+            <pre class="code">
+              <code>
+  // While Loop
+  var count, grade, i, len, num, ref, values, worst_sing_group;
+
+  console.log("Starting While Loop");
+
+  count = 0;
+
+  while (count < 10) {
+    console.log("Current Count : " + count);
+    count++;
+  }
+
+  ref = ['SophFrosh', 'Junior'];
+  for (grade = i = 0, len = ref.length; i < len; grade = ++i) {
+    worst_sing_group = ref[grade];
+    console.log("hey hey! ho ho! " + worst_sing_group + " SING just lost the show.");
+  }
+
+  //Another For Loop
+  values = (function() {
+    var j, results;
+    results = [];
+    for (num = j = 1; j <= 10; num = j += 2) {
+      results.push(num);
+    }
+    return results;
+  })();
+
+  console.log(values);
+              </code>
+            </pre>
+          </div>
+        </div>
+        <h5><small><strong>Output</strong></small></h5>
+        <div class="row">
+          <div class="col-md-12">
+            <pre class="cmd">
+              <code>
+  Starting While Loop
+  Current Count : 0
+  Current Count : 1
+  Current Count : 2
+  Current Count : 3
+  Current Count : 4
+  Current Count : 5
+  Current Count : 6
+  Current Count : 7
+  Current Count : 8
+  Current Count : 9
+  hey hey! ho ho! SophFrosh SING just lost the show.
+  hey hey! ho ho! Junior SING just lost the show.
+  [ 1, 3, 5, 7, 9 ]
+              </code>
+            </pre>
+          </div>
+        </div>
+        <hr>
+        <h1 class="display-4">Other Information</h1>
+        <hr>
+        <p class="lead"><strong>Answers to questions from class</strong></p>
+        <strong>Q: Can you access arrays backwards or with negative indexing?</strong><br>
+        A: Sort of, you can used the command .reverse() to reverse the array.<br>
+        As an example: <br>
+        <pre class="code">
+          <code>
+  physics_test_grades = [97,88,75,49,34,22,1]
+  console.log physics_test_grades[0..2]
+          </code>
+        </pre>
+        outputs
+        <pre class="cmd">
+          <code>
+
+  <samp>[97,88,75]</samp>
+        </code>
+      </pre>
+        While
+        <pre class="code">
+          <code>
+
+  console.log physics_test_grades[0..2].reverse()
+          </code>
+        </pre>
+        outputs
+        <pre class="cmd">
+          <code>
+
+  <samp>[75,88,97]</samp>
+          </code>
+        </pre>
+        As for the negative indexing, CoffeeScript <strong>doesn’t</strong> support negative indexing.
+        <br><br>
+        <strong>Q: Is CoffeeScript used more to facilitate back-end or used more for front-end?</strong><br>
+        A: CoffeeScript is mainly a <strong>back-end</strong> programming language. Especially when it comes to functions, CoffeeScript greatly reduces the number of lines of code needed to perform the same function in JavaScript. Another reason why CoffeeScript is mainly used for back-end is due to its class-based object system, allowing for the creation of classes and inheritance, which is not allowed in JavaScript. Also because browsers do not support CoffeeScript natively, it should be used as back-end.
+        <br><br>
+        <strong>Q: Can CoffeeScript be used to access DOM elements?</strong><br>
+        A: Yes. You can use document to access the DOM like in JavaScript or use a library like jquery. The golden rule of CoffeeScript is that “it’s just JavaScript”, so DOM elements can be accessed.
+
+        <hr>
+        <p class="lead">Links and sources</p>
+        <a href="https://docs.google.com/presentation/d/1tKwHet8d_cFm3VAUHrdPSZrH4ZYZRBQpOtd4XVtuB_Y/edit?usp=sharing">Slideshow Presentation</a>
+        <br>
+        <a href="https://coffeescript.org/">Official CoffeeScript website</a>
+
+      </div>
+    </div>
+  </body>
+</html>
