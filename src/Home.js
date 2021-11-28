@@ -1,13 +1,11 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NavigationBar from './NavigationBar';
 import Container from 'react-bootstrap/Container';
 import './App.css';
 const Home = () => {
   return (
     <div>
-      <NavigationBar />
       <br />
       <Container>
         <Row>

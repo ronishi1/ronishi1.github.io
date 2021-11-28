@@ -1,5 +1,4 @@
 import React from 'react';
-import NavigationBar from './NavigationBar';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -8,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 const Projects = () => {
   return (
     <div>
-      <NavigationBar />
       <br />
       <Container>
         <Row>
