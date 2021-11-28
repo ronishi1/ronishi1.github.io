@@ -1,3 +1,28 @@
 .center {
   text-align:center;
 }
+
+.link-button{
+  margin-top:8px;
+}
+
+.item {
+  width:100%;
+}
+
+.item img{
+  width:100%
+}
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 0.6rem;
+}
+
+.brand-font {
+  font-size: 1.5rem !important;
+}
+
+.description {
+  color: rgba(0,0,0,.62);
+}
