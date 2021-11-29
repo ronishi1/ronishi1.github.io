@@ -26,3 +26,7 @@
 .description {
   color: rgba(0,0,0,.62);
 }
+
+.nav {
+  background-color: rgba(248,249,250,1);
+}

@@ -14,7 +14,7 @@ const Home = () => {
           <Col xs={7} >
             <h2>Hi!</h2>
             <div style={{fontSize:"1.5rem"}} className="description">
-              I'm Ray Onishi, a junior studying computer science at Stony Brook University.
+              I'm Ray Onishi, a junior studying computer science at <a style={{textDecoration:"none"}} href="https://www.stonybrook.edu/">Stony Brook University</a>.
               I'm an aspiring software engineer with an interest in the finance and fintech industry.
             </div>
           </Col>
