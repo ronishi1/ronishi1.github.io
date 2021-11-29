@@ -19,7 +19,7 @@ const Home = () => {
             </div>
           </Col>
           <Col xs={3} style={{marginLeft:"30px"}}>
-            <img width="250px" height="250px" src="https://www.svgrepo.com/show/26995/avatar.svg" />
+            <img width="250px" height="250px" src="ray.png" />
           </Col>
         </Row>
         <br />
